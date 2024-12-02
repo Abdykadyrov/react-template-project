@@ -1,0 +1,52 @@
+.basicLayout {
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-white);
+    border-right: 1px solid var(--color-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  &__menu {
+    & ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
+      gap: 1rem;
+      margin: 0;
+      & li {
+        & > a {
+          font-size: 1rem;
+          line-height: normal;
+          font-weight: 400;
+          text-decoration: none;
+          color: var(--color-blue);
+          &:hover {
+            filter: brightness(85%);
+          }
+        }
+        &.active {
+          border-bottom: 1px solid var(--color-green);
+          & > a {
+            color: var(--color-green);
+          }
+        }
+      }
+    }
+  }
+  &__wrapper {
+    position: relative;
+    top: 3.75rem;
+    left: 0;
+    min-height: calc(100vh - 3.75rem);
+    padding: 1.25rem;
+    background-color: #f0f0f0;
+  }
+}
